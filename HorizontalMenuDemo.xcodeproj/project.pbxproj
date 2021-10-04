@@ -59,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451065E9270AE8DB008B2A3F /* HorizontalTabView */ = {
+			isa = PBXGroup;
+			children = (
+				459464AD270429DC006CCE57 /* HorizontalMenuView.swift */,
+			);
+			path = HorizontalTabView;
+			sourceTree = "<group>";
+		};
 		455F2F5627059F1F00003DA7 /* core */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +155,12 @@
 		4594649027042474006CCE57 /* HorizontalMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				451065E9270AE8DB008B2A3F /* HorizontalTabView */,
 				455F2F5F2705C5EA00003DA7 /* SwipeableView */,
 				455F2F592705B4BE00003DA7 /* Base */,
 				457C8B94270480B2004781F5 /* Helpers */,
 				457C8B93270480A0004781F5 /* AppDel */,
 				459464A727042730006CCE57 /* CustomTabs */,
-				459464AD270429DC006CCE57 /* HorizontalMenuView.swift */,
 				459464972704247A006CCE57 /* Assets.xcassets */,
 				4594649C2704247A006CCE57 /* LaunchScreen.storyboard */,
 				4594649F2704247A006CCE57 /* Info.plist */,

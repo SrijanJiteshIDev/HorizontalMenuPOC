@@ -32,6 +32,7 @@ enum ContentListingComponents: Equatable, Identifiable {
 enum ContentAction {
   case pageChanged(currentPage: Int)
   case contentListingActions(id: Int, action: ContentListingComponentActions)
+  case tabChanged(currentPage: Int)
 }
 
 // Actions for swipe listing view
@@ -70,6 +71,9 @@ let contentReducer = Reducer<ContentState, ContentAction, ContentEnvironment>.co
           state.currentTab = index
         }
       }
+    case .tabChanged(let currentTab):
+      // print("TAB CHANGED", currentTab)
+      state.currentTab = currentTab
     }
     return .none
   }

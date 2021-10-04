@@ -16,7 +16,7 @@ struct ContentView: View {
     WithViewStore(self.store) { viewStore in
       VStack(spacing: 0) {
         // Tabs
-        HorizontalMenuView(horizontalMenuList: viewStore.state.menuList, selectedTab: viewStore.binding(get: \.currentTab, send: ContentAction.pageChanged))
+        HorizontalMenuView(horizontalMenuList: viewStore.state.menuList, selectedTab: viewStore.binding(get: \.currentTab, send: ContentAction.tabChanged))
         
         // Pageview
         PagingView(index: viewStore.binding(get: \.currentTab, send: ContentAction.pageChanged), maxIndex: viewStore.state.menuList.count - 1) {
