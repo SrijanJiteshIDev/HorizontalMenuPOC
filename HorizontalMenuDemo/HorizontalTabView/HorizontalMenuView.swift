@@ -52,6 +52,6 @@ struct HorizontalMenuView: View {
 
 struct Tabs_Previews: PreviewProvider {
   static var previews: some View {
-    HorizontalMenuView(horizontalMenuList: [.init(id: 0, menuTitle: "Tab 1", ctaButton: .withoutButton), .init(id: 1, menuTitle: "Tab 2", ctaButton: .withoutButton), .init(id: 2, menuTitle: "Tab 3", ctaButton: .withoutButton)], selectedTab: .constant(0))
+    HorizontalMenuView(horizontalMenuList: [.init(id: 0, menuTitle: "Tab 1", bgColor: UIColor.red, ctaButton: .withoutButton), .init(id: 1, menuTitle: "Tab 2", bgColor: UIColor.blue, ctaButton: .withoutButton), .init(id: 2, menuTitle: "Tab 3", bgColor: UIColor.green, ctaButton: .withoutButton)], selectedTab: .constant(0))
   }
 }

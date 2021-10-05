@@ -60,6 +60,7 @@ struct ContentView_Previews: PreviewProvider {
 struct HorizontalMenu: Equatable, Identifiable {
   var id: Int
   var menuTitle: String
+  var bgColor: UIColor
   var ctaButton: CTAButton
 }
 
@@ -85,12 +86,12 @@ enum CTAButtonActionType : String{
 
 
 let horizontalMenuList: [HorizontalMenu] = [
-  .init(id: 0, menuTitle: "Top stories", ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Asia", viewMoreId: "3"))),
-  .init(id: 1, menuTitle: "Latest News", ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Random CTA", viewMoreId: "100"))),
-  .init(id: 2, menuTitle: "Singapore", ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Lifestyle", viewMoreId: "5"))),
-  .init(id: 3, menuTitle: "Asia", ctaButton: .withoutButton),
-  .init(id: 4, menuTitle: "Africa", ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Latest News", viewMoreId: "1"))),
-  .init(id: 5, menuTitle: "Lifestyle", ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Top Stories", viewMoreId: "0")))
+  .init(id: 0, menuTitle: "Top stories", bgColor: UIColor.green, ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Asia", viewMoreId: "3"))),
+  .init(id: 1, menuTitle: "Latest News", bgColor: UIColor.blue, ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Random CTA", viewMoreId: "100"))),
+  .init(id: 2, menuTitle: "Singapore", bgColor: UIColor.darkGray, ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Lifestyle", viewMoreId: "5"))),
+  .init(id: 3, menuTitle: "Asia", bgColor: UIColor.brown, ctaButton: .withoutButton),
+  .init(id: 4, menuTitle: "Africa", bgColor: UIColor.purple, ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Latest News", viewMoreId: "1"))),
+  .init(id: 5, menuTitle: "Lifestyle", bgColor: UIColor.yellow, ctaButton: .withCTAButton(CTAButtonState(viewMoreTitle: "Top Stories", viewMoreId: "0")))
 ]
 
 func convertComponentToState(menuList: [HorizontalMenu]) -> IdentifiedArrayOf<ContentListingComponents> {

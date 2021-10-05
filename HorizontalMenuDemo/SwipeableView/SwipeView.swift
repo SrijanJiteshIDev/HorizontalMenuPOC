@@ -14,7 +14,7 @@ struct SwipeView: View {
   var body: some View {
     WithViewStore(self.store) { viewStore in
       ZStack {
-        Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+        Color(viewStore.selectedMenu.bgColor)
         VStack(spacing: 20) {
           Text(viewStore.selectedMenu.menuTitle)
             .foregroundColor(.black)
@@ -45,6 +45,6 @@ struct SwipeView: View {
 
 struct SwipeView_Previews: PreviewProvider {
   static var previews: some View {
-    SwipeView(store: Store(initialState: SwipeViewState(selectedMenu: .init(id: 0, menuTitle: "Hello", ctaButton: .withoutButton)), reducer: swipeReducer, environment: SwipeViewEnvironment()))
+    SwipeView(store: Store(initialState: SwipeViewState(selectedMenu: .init(id: 0, menuTitle: "Hello", bgColor: UIColor.red, ctaButton: .withoutButton)), reducer: swipeReducer, environment: SwipeViewEnvironment()))
   }
 }
