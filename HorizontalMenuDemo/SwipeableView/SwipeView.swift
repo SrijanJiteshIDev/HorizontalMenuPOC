@@ -14,10 +14,10 @@ struct SwipeView: View {
   var body: some View {
     WithViewStore(self.store) { viewStore in
       ZStack {
-        Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1))
+        Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         VStack(spacing: 20) {
           Text(viewStore.selectedMenu.menuTitle)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .font(Font.system(size: 25, weight: .bold))
           
           switch viewStore.selectedMenu.ctaButton {
@@ -33,8 +33,8 @@ struct SwipeView: View {
                 Text("\(ctaState.viewMoreTitle)")
               })
               .padding()
-              .background(Color.white)
-              .foregroundColor(Color.black)
+              .background(Color(red: 210/256, green: 45/256, blue: 40/256))
+              .foregroundColor(Color.white)
             }
           }
         }

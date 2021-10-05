@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TabView1: View {
+    var title: String
     var body: some View {
-        Text("TabView1")
+        Text(title)
     }
 }
 
 struct TabView1_Previews: PreviewProvider {
     static var previews: some View {
-        TabView1()
+        TabView1(title: "")
     }
 }
